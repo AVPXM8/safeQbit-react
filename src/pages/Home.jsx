@@ -95,7 +95,7 @@ export default function Home() {
                       NQM Consortium Collaboration – PQCAuthentica
                     </div>
                     <div className={styles.activityText}>
-                      Partnering with IIT Madras, C-DOT, and Samgnya Foundation to advance PQCAuthentica, our lightweight post-quantum authentication research initiative.
+                      Partnering with IITM CDOT Samgnya Technologies Foundation and IIT Madras Incubation Cell (IITM IC) to advance PQCAuthentica, our lightweight post-quantum authentication research initiative.
                     </div>
                   </div>
                 </div>
