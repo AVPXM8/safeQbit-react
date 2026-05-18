@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeQbit Technology Limited</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      (function() {
+        const setFavicon = () => {
+          const favicon = document.querySelector("link[rel='icon']");
+          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (!isDark) {
+            favicon.href = '/favicon.png';
+            return;
+          }
+          const img = new Image();
+          img.src = '/favicon.png';
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            ctx.globalCompositeOperation = 'source-in';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            favicon.href = canvas.toDataURL('image/png');
+          };
+        };
+        setFavicon();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+      })();
+    </script>
+  </body>
+</html>
