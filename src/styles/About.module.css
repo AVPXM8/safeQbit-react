@@ -2,48 +2,398 @@
 /*                           ABOUT PAGE SPECIFIC STYLES                      */
 /* ========================================================================= */
 
-.borderGoldLeft {
-  border-left: 4px solid var(--color-gold);
-  padding-left: 20px;
+.aboutSection {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
-.borderGoldRight {
-  border-right: 4px solid var(--color-gold);
-  padding-right: 20px;
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(74, 175, 250, 0.04) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .goldKicker {
   color: var(--color-gold) !important;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 14.5px;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.aboutTitle {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.aboutTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--color-gold);
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.aboutText {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Highlights Grid */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
+.highlightItem:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.highlightIcon {
+  font-size: 20px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.highlightText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* About Image Frame */
+.aboutImageWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.aboutImageFrame {
+  position: relative;
+  border-radius: 24px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 60px rgba(2, 16, 97, 0.08);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.aboutImageFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(74, 175, 250, 0.1) 0%, rgba(244, 180, 26, 0.1) 100%);
+  pointer-events: none;
+}
+
+.aboutImageFrame:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 35px 80px rgba(2, 16, 97, 0.12);
+}
+
+.aboutImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.aboutImageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(135deg, var(--color-gold) 0%, #e29f04 100%);
+  border-radius: 24px;
+  z-index: 1;
+  opacity: 0.15;
+  transition: all 0.4s ease;
+}
+
+.aboutImageWrapper:hover::before {
+  transform: translate(8px, 8px);
+  opacity: 0.25;
+}
+
+/* ===============================
+   VISION & MISSION CARDS
+ ================================== */
+.purposeSection {
+  background: linear-gradient(180deg, #f5f8ff 0%, #eef4ff 100%);
+  position: relative;
+}
+
+.purposeSectionHeader {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.purposeCard {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  height: 100%;
+  box-shadow: 0 15px 35px rgba(2, 16, 97, 0.03);
+  border: 1px solid rgba(2, 16, 97, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.purposeCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.purposeCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(2, 16, 97, 0.08);
+}
+
+.purposeCard:hover::before {
+  opacity: 1;
+}
+
+.visionCard::before {
+  background: var(--color-gold);
+}
+
+.missionCard::before {
+  background: var(--accent-color);
+}
+
+.purposeIconBox {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.visionIcon {
+  background: rgba(244, 180, 26, 0.1);
+  color: var(--color-gold);
+}
+
+.missionIcon {
+  background: rgba(74, 175, 250, 0.1);
+  color: var(--accent-color);
+}
+
+.purposeCard h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.purposeCard p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.missionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.missionList li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+  font-size: 15.5px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.missionList li::before {
+  content: '\F586'; /* Bootstrap Icons check circle fill */
+  font-family: 'bootstrap-icons';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--accent-color);
+  font-size: 18px;
 }
 
 /* ===============================
    LEADERSHIP TEAM IMAGES & BOXES
  ================================== */
+.leaderSection {
+  padding: 80px 0;
+}
+
+.teamImgWrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 24px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(2, 16, 97, 0.06);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 2;
+}
+
+.teamImgWrapper::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, var(--color-gold) 0%, #e29f04 100%);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.15;
+  transition: all 0.4s ease;
+}
+
+.teamImgWrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(2, 16, 97, 0.12);
+}
+
+.teamImgWrapper:hover::before {
+  transform: translate(6px, 6px);
+  opacity: 0.3;
+}
+
 .teamImg {
   width: 100%;
-  max-width: 360px;
-  height: 440px;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: top;
+  object-position: center top;
   border-radius: 16px;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 15px 40px rgba(2, 16, 97, 0.1);
-  background: #ffffff;
+  display: block;
 }
 
-.teamImg:hover {
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 25px 50px rgba(2, 16, 97, 0.16);
+/* Leadership Content Styles */
+.leaderName {
+  color: var(--color-gold) !important;
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
 }
 
-.borderGoldThick {
-  border-bottom: 8px solid var(--color-gold);
-  border-right: 8px solid var(--color-gold);
+.leaderRole {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.customBadge {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badgeGold {
+  background-color: rgba(244, 180, 26, 0.1);
+  color: #ab7a05;
+}
+
+.badgeNavy {
+  background-color: rgba(2, 16, 97, 0.06);
+  color: var(--primary-color);
+}
+
+.badgeAzure {
+  background-color: rgba(74, 175, 250, 0.1);
+  color: #0b78c4;
+}
+
+.leaderBio {
+  color: var(--text-muted);
+  font-size: 15.5px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+.contactLink {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactLink:hover {
+  color: var(--accent-color);
+  transform: translateX(4px);
 }
 
 /* ===============================
@@ -51,18 +401,19 @@
  ================================== */
 .expertiseCard {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(2, 16, 97, 0.04);
+  box-shadow: 0 10px 30px rgba(2, 16, 97, 0.03);
   border-bottom: 4px solid transparent !important;
   height: 100%;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(2, 16, 97, 0.01);
 }
 
 .expertiseCard:hover {
   border-bottom: 4px solid var(--color-gold) !important;
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(2, 16, 97, 0.1) !important;
+  box-shadow: 0 20px 45px rgba(2, 16, 97, 0.08) !important;
 }
 
 .expertiseCard:hover i {
@@ -72,9 +423,9 @@
 
 .expertiseIcon {
   font-size: 42px;
-  color: var(--color-gold);
+  color: var(--accent-color);
   margin-bottom: 24px;
-  display: block;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
@@ -97,21 +448,58 @@
    RESPONSIVE STYLES
  ================================== */
 @media (max-width: 991px) {
+  .aboutTitle {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  
+  .aboutTitle::after {
+    margin: 12px auto 0;
+  }
+  
+  .aboutImageWrapper {
+    margin-top: 40px;
+  }
+
   .teamImg {
-    max-width: 290px;
-    height: 360px;
-    margin-bottom: 20px;
+    max-width: 260px;
   }
-  .borderGoldLeft {
-    border-left: none;
-    border-top: 3px solid var(--color-gold);
-    padding-left: 0;
-    padding-top: 15px;
+
+  .leaderName {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 15px;
   }
-  .borderGoldRight {
-    border-right: none;
-    border-top: 3px solid var(--color-gold);
-    padding-right: 0;
-    padding-top: 15px;
+
+  .leaderRole {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .badgeContainer {
+    justify-content: center;
+  }
+
+  .contactLink {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .purposeCard {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutTitle {
+    font-size: 1.8rem;
+  }
+
+  .teamImg {
+    max-width: 220px;
   }
 }
