@@ -56,19 +56,33 @@ export default function Header() {
         {/* MENU */}
         <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`} id="navbarContent">
           <ul className="navbar-nav gap-lg-2 mt-3 mt-lg-0 align-items-lg-center">
-            {navLinks.map((link) => (
-              <li key={link.path} className="nav-item">
-                <NavLink 
-                  className={({ isActive }) => 
-                    `nav-link nav-link-custom ${isActive ? 'active-link' : ''}`
-                  } 
-                  to={link.path}
-                  end={link.path === '/'}
-                >
-                  {link.name}
-                </NavLink>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path || (link.path === '/' && location.pathname === '/');
+              return (
+                <li key={link.path} className="nav-item position-relative">
+                  <Link 
+                    className={`nav-link nav-link-custom ${isActive ? 'text-white' : ''}`} 
+                    to={link.path}
+                  >
+                    {link.name}
+                  </Link>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNavIndicator"
+                      className="position-absolute bottom-0 start-0 end-0"
+                      style={{
+                        height: '3px',
+                        background: 'var(--accent-color)',
+                        borderRadius: '3px',
+                        bottom: '2px'
+                      }}
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

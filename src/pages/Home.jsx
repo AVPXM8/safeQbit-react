@@ -187,9 +187,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <Link to="/contact" className="btn btn-premium mt-3">
-                  Connect Now <i className="bi bi-arrow-right-circle-fill ms-2"></i>
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ display: 'inline-block' }}>
+                  <Link to="/contact" className="btn btn-premium mt-3">
+                    Connect Now <i className="bi bi-arrow-right-circle-fill ms-2"></i>
+                  </Link>
+                </motion.div>
               </motion.div>
             </div>
 
@@ -292,10 +294,11 @@ export default function Home() {
             ].map((service, index) => (
               <div key={index} className="col-lg col-md-4 col-sm-6 col-12">
                 <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
                   className={styles.serviceCard}
                 >
                   <h5>{service}</h5>
