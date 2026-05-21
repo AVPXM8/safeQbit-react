@@ -20,8 +20,10 @@ import slider6Img from '../assets/images/slider6.png';
 import mvpWinnersImg from '../assets/images/MVP_Stage_Winners.png';
 import finalWinnerImg from '../assets/images/final_stage_winner .png';
 import brandLogoWebp from '../assets/images/dark4x.webp';
+import nqmImg from '../assets/images/CEONQM -hub-IITM.jpeg';
 
 const slides = [
+  { img: nqmImg, alt: 'National Quantum Mission (NQM) Hub IITM' },
   { img: newsImg, alt: 'SafeQbit Recent Updates & Collaborations' },
   { img: teamImg, alt: 'SafeQbit Core Working Team' },
   { img: ompalsirImg, alt: 'Dr. Om Pal - Director & CEO presentation' },
@@ -92,7 +94,7 @@ export default function Home() {
                   <div className={styles.activityIcon} aria-hidden="true">🏆</div>
                   <div className={styles.activityBody}>
                     <div className={styles.activityHeading}>
-                      NQM Consortium Collaboration – PQCAuthentica
+                      National Quantum Mission (NQM) Consortium Collaboration – PQCAuthentica
                     </div>
                     <div className={styles.activityText}>
                       Partnering with IITM CDOT Samgnya Technologies Foundation and IIT Madras Incubation Cell (IITM IC) to advance PQCAuthentica, our lightweight post-quantum authentication research initiative.
