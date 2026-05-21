@@ -53,9 +53,20 @@ export default function Footer() {
               <div className="footer-contact-item">
                 <i className="bi bi-geo-alt-fill" aria-hidden="true"></i>
                 <div>
+                  <strong>Headquarters:</strong><br />
                   F No 6053, Mahagun Mywoods,<br />
                   Sect- 16C, Gr Noida (W),<br />
                   G. B. Nagar – 201318, UP, India
+                </div>
+              </div>
+              <div className="footer-contact-item">
+                <i className="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                <div>
+                  <strong>Delhi Office:</strong><br />
+                  SafeQbit Technologies Private Limited,<br />
+                  Udhmodya Foundation, 5th Floor,<br />
+                  Maharishi Kanad Bhawan, North Campus,<br />
+                  University of Delhi - 110007
                 </div>
               </div>
               <div className="footer-contact-item">

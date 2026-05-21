@@ -178,9 +178,9 @@ export default function Contact() {
                     <div>
                       <h5>Delhi Office</h5>
                       <p>
-                        5th Floor, Maharishi Kanad Bhawan,<br/>
-                        UNIVERSITY OF DELHI, Faculty of Science,<br/>
-                        University Enclave, Delhi, 110007
+                        SafeQbit Technologies Private Limited,<br/>
+                        Udhmodya Foundation, 5th Floor, Maharishi Kanad Bhawan,<br/>
+                        North Campus, University of Delhi - 110007
                       </p>
                     </div>
                   </motion.div>
