@@ -14,7 +14,7 @@ export default function About() {
       {/* ================= PAGE HEADER ================= */}
       <section className="page-header-section text-center">
         <div className="container">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -22,8 +22,8 @@ export default function About() {
           >
             About Us
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.9 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -38,7 +38,7 @@ export default function About() {
       <section className={`${styles.aboutSection} py-5`}>
         <div className="container py-4">
           <div className="row align-items-center g-5">
-            
+
             {/* Typography Content (LEFT) */}
             <div className="col-lg-6">
               <motion.div
@@ -49,7 +49,7 @@ export default function About() {
               >
                 <span className={styles.goldKicker}>Securing the Digital Future</span>
                 <h2 className={styles.aboutTitle}>About SafeQbit</h2>
-                
+
                 <p className={styles.aboutText}>
                   SafeQbit, formally known as SafeQbit Technologies Pvt. Ltd., is a DPIIT-registered, Noida-based deep-tech cybersecurity company focused on quantum-safe cryptography, secure communication systems, and next-generation encryption technologies.
                 </p>
@@ -81,7 +81,7 @@ export default function About() {
 
             {/* Premium Image Frame (RIGHT) */}
             <div className="col-lg-6 text-center">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95, x: 30 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -89,9 +89,9 @@ export default function About() {
                 className={styles.aboutImageWrapper}
               >
                 <div className={styles.aboutImageFrame}>
-                  <img 
-                    src={teamImg} 
-                    alt="SafeQbit Core Working Team" 
+                  <img
+                    src={teamImg}
+                    alt="SafeQbit Core Working Team"
                     className={styles.aboutImg}
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function About() {
       {/* ================= VISION & MISSION SECTION ================= */}
       <section className={`${styles.purposeSection} py-5`}>
         <div className="container py-4">
-          
+
           <div className={`${styles.purposeSectionHeader} text-center`}>
             <span className={styles.goldKicker}>Our Core Purpose</span>
             <h2 className="fw-bold display-6 mt-1 text-navy">Shaping Post-Quantum Trust</h2>
@@ -115,10 +115,10 @@ export default function About() {
           </div>
 
           <div className="row g-4 justify-content-center mt-3">
-            
+
             {/* VISION CARD */}
             <div className="col-lg-6 col-md-12">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -140,7 +140,7 @@ export default function About() {
 
             {/* MISSION CARD */}
             <div className="col-lg-6 col-md-12">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -175,19 +175,19 @@ export default function About() {
       <section className={`${styles.leaderSection} bg-white`}>
         <div className="container">
           <div className="row align-items-center g-5">
-            
+
             {/* Profile image (LEFT) */}
             <div className="col-lg-5 text-center">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9, x: -30 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className={styles.teamImgWrapper}
               >
-                <img 
-                  src={ompalImg} 
-                  alt="Dr. Om Pal - Director & CEO" 
+                <img
+                  src={ompalImg}
+                  alt="Dr. Om Pal - Director & CEO"
                   className={styles.teamImg}
                 />
               </motion.div>
@@ -231,7 +231,7 @@ export default function About() {
       <section className={`${styles.leaderSection}`} style={{ background: '#fbfcfd' }}>
         <div className="container">
           <div className="row align-items-center g-5">
-            
+
             {/* Profile Content (LEFT on Desktop, order-2 on mobile) */}
             <div className="col-lg-7 order-2 order-lg-1">
               <motion.div
@@ -263,16 +263,16 @@ export default function About() {
 
             {/* Profile image (RIGHT on Desktop, order-1 on mobile) */}
             <div className="col-lg-5 text-center order-1 order-lg-2">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9, x: 30 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className={styles.teamImgWrapper}
               >
-                <img 
-                  src={laxmiImg} 
-                  alt="Laxmi Chandolia - Director & COO" 
+                <img
+                  src={laxmiImg}
+                  alt="Laxmi Chandolia - Director & COO"
                   className={styles.teamImg}
                 />
               </motion.div>
@@ -286,19 +286,19 @@ export default function About() {
       <section className={`${styles.leaderSection} bg-white`}>
         <div className="container">
           <div className="row align-items-center g-5">
-            
+
             {/* Profile image (LEFT) */}
             <div className="col-lg-5 text-center">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9, x: -30 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className={styles.teamImgWrapper}
               >
-                <img 
-                  src={pardeepImg} 
-                  alt="Pardeep Singh - Director & CTO" 
+                <img
+                  src={pardeepImg}
+                  alt="Pardeep Singh - Director & CTO"
                   className={styles.teamImg}
                 />
               </motion.div>
@@ -313,7 +313,7 @@ export default function About() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className={styles.leaderName}>Pardeep Singh</h2>
-                <h5 className={styles.leaderRole}>Technology Head</h5>
+                <h5 className={styles.leaderRole}>Strategic Innovation & Technology Head </h5>
 
                 {/* Professional tags */}
                 <div className={styles.badgeContainer}>
@@ -346,7 +346,7 @@ export default function About() {
       {/* ================= EXPERTISE SECTION ================= */}
       <section className="py-5" style={{ background: '#f5f8ff' }}>
         <div className="container py-4">
-          
+
           {/* Section Heading */}
           <div className="text-center mb-5">
             <h2 className="text-navy fw-bold text-uppercase display-6">
@@ -387,7 +387,7 @@ export default function About() {
               }
             ].map((exp, idx) => (
               <div key={idx} className="col-lg-4 col-md-6 col-sm-12">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

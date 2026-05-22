@@ -138,14 +138,6 @@
   background: linear-gradient(90deg, #4aaffa 0%, #021061 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  .contactFormBox {
-    background: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.05);
-  }
-}
-
 .contactFormBox h3 {
   color: var(--text-h);
   font-family: var(--heading);
@@ -181,18 +173,6 @@
 .customInput::placeholder {
   color: #94a3b8;
   opacity: 1;
-}
-
-@media (prefers-color-scheme: dark) {
-  .customInput {
-    background-color: #1e293b;
-    border: 1.5px solid #334155;
-    color: #f8fafc;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  .customInput::placeholder {
-    color: #64748b;
-  }
 }
 
 .customInput:focus {
@@ -262,5 +242,35 @@
   }
   .contactFormBox h3 {
     font-size: 1.5rem;
+  }
+}
+
+/* ===============================
+   DARK MODE OVERRIDES (CONSOLIDATED)
+ ================================== */
+@media (prefers-color-scheme: dark) {
+  .contactFormBox {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  }
+  .contactFormBox h3 {
+    color: #f8fafc !important;
+  }
+  .formLabel {
+    color: #cbd5e1 !important;
+  }
+  .customInput {
+    background-color: #1e293b !important;
+    border: 1.5px solid #334155 !important;
+    color: #f8fafc !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  }
+  .customInput option {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+  }
+  .customInput::placeholder {
+    color: #64748b !important;
   }
 }
