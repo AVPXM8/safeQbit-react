@@ -19,11 +19,13 @@ import slider5Img from '../assets/images/slider5.png';
 import slider6Img from '../assets/images/slider6.png';
 import mvpWinnersImg from '../assets/images/MVP_Stage_Winners.png';
 import finalWinnerImg from '../assets/images/final_stage_winner .png';
+import meityAwardImg from '../assets/images/award-given-by-MeitY-Secretary.jpeg';
 import brandLogoWebp from '../assets/images/dark4x.webp';
 import nqmImg from '../assets/images/CEONQM -hub-IITM.jpeg';
 
 const slides = [
   { img: nqmImg, alt: 'National Quantum Mission (NQM) Hub IITM' },
+  { img: meityAwardImg, alt: 'Facilitated by Secretary, MeitY, Govt of India: Data Security category winner under Cyber Security Grand Challenge 2.0' },
   { img: newsImg, alt: 'SafeQbit Recent Updates & Collaborations' },
   { img: teamImg, alt: 'SafeQbit Core Working Team' },
   { img: ompalsirImg, alt: 'Dr. Om Pal - Director & CEO presentation' },
@@ -55,22 +57,22 @@ export default function Home() {
       {/* ================= SLIDER & ACTIVITY ROW ================= */}
       <div className={`${styles.homepageContainer} container-fluid mt-3`}>
         <div className="row g-4 align-items-stretch w-100 m-0">
-          
+
           {/* SLIDESHOW (LEFT) */}
           <div className="col-lg-8 col-md-12">
-            <div 
+            <div
               className={styles.sliderSection}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
               <div className={styles.slider}>
-                <div 
+                <div
                   className={styles.slides}
                   style={{ transform: `translateX(-${slideIndex * 100}%)` }}
                 >
                   {slides.map((slide, i) => (
-                    <div 
-                      key={i} 
+                    <div
+                      key={i}
                       className={`${styles.slide} ${i === slideIndex ? styles.activeSlide : ''}`}
                     >
                       <img src={slide.img} className="img-fluid" alt={slide.alt} />
@@ -106,7 +108,7 @@ export default function Home() {
                   <div className={styles.activityIcon} aria-hidden="true">🏆</div>
                   <div className={styles.activityBody}>
                     <div className={styles.activityHeading}>
-                      Cyber Security Grand Challenge 2.0 — Data Security Category (Winners)
+                      Facilitated by Secretary, MeitY, Govt of India: Data Security category winner under Cyber Security Grand Challenge 2.0
                     </div>
                     <div className={styles.activityText}>
                       Celebrating excellence and innovation in data security at the Final Product Stage.
@@ -136,9 +138,9 @@ export default function Home() {
       <section className={styles.heroSection}>
         <div className="container">
           <div className="row align-items-center">
-            
+
             <div className="col-lg-6">
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 0.9, x: 0 }}
                 viewport={{ once: true }}
@@ -148,7 +150,7 @@ export default function Home() {
                 If Excellence is your Preference,
               </motion.p>
 
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -160,7 +162,7 @@ export default function Home() {
                 Cybersecurity Services!
               </motion.h1>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 0.9 }}
                 viewport={{ once: true }}
@@ -170,7 +172,7 @@ export default function Home() {
                 We build a knowledge-driven community focused on awareness, education, and the adoption of post-quantum cybersecurity technologies.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -199,17 +201,17 @@ export default function Home() {
 
             {/* HERO STATIC IMAGE (RIGHT) */}
             <div className="col-lg-6 text-center mt-5 mt-lg-0">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 className="d-flex justify-content-center align-items-center"
               >
-                <img 
-                  src={brandLogoWebp} 
-                  className="img-fluid" 
-                  alt="SafeQbit Large Emblem" 
+                <img
+                  src={brandLogoWebp}
+                  className="img-fluid"
+                  alt="SafeQbit Large Emblem"
                   style={{ width: 'min(330px, 90%)', filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.3))' }}
                 />
               </motion.div>
@@ -222,7 +224,7 @@ export default function Home() {
       {/* ================= RECOGNITION SECTION ================= */}
       <section className="py-5 bg-white">
         <div className="container py-4 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -231,22 +233,22 @@ export default function Home() {
             Recognized Among The Best Cyber Security Service Providers.
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 0.8 }}
             viewport={{ once: true }}
             className={`${styles.recognitionDesc} mt-3 mb-5`}
           >
-            Safeqbit Startup Recognition by the Data Security Council of India (DSCI) and Ministry of Electronics & Information Technology (MeitY), GoI at CSGC2.0 as MVP Stage Winners and Final Product Stage Winners 🏆
+            Safeqbit Startup Recognition by the Data Security Council of India (DSCI) and Ministry of Electronics & Information Technology (MeitY), GoI at CSGC2.0 as MVP Stage Winners, Final Product Stage Winners, and facilitated by the Secretary, MeitY 🏆
           </motion.p>
 
           <div className="row mt-5 g-4 justify-content-center">
             {/* MVP STAGE */}
-            <div className="col-lg-6 text-center mb-4">
+            <div className="col-lg-4 col-md-6 text-center mb-4">
               <h5 className="fw-bold mb-3 text-navy">🏅 MVP Stage Winners</h5>
-              <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className={styles.awardOuterWrapper}
@@ -258,17 +260,33 @@ export default function Home() {
             </div>
 
             {/* FINAL STAGE */}
-            <div className="col-lg-6 text-center mb-4">
+            <div className="col-lg-4 col-md-6 text-center mb-4">
               <h5 className="fw-bold mb-3 text-navy">🏆 Final Product Stage Winners</h5>
-              <motion.div 
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className={styles.awardOuterWrapper}
               >
                 <div className={styles.awardRevealContainer}>
                   <img src={finalWinnerImg} className={styles.awardImg} alt="Final Product Winners" />
+                </div>
+              </motion.div>
+            </div>
+
+            {/* MEITY AWARD STAGE */}
+            <div className="col-lg-4 col-md-6 text-center mb-4">
+              <h5 className="fw-bold mb-3 text-navy">🏆 Facilitated by Secretary, MeitY</h5>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className={styles.awardOuterWrapper}
+              >
+                <div className={styles.awardRevealContainer}>
+                  <img src={meityAwardImg} className={styles.awardImg} alt="Facilitated by Secretary, MeitY" />
                 </div>
               </motion.div>
             </div>
@@ -295,7 +313,7 @@ export default function Home() {
               "Training And Workshops"
             ].map((service, index) => (
               <div key={index} className="col-lg col-md-4 col-sm-6 col-12">
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -317,7 +335,7 @@ export default function Home() {
       {/* ================= WHY US (STATS) SECTION ================= */}
       <section className={styles.whySection}>
         <div className="container">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -354,7 +372,7 @@ export default function Home() {
 
           <div className="row justify-content-center g-4 mt-3">
             <div className="col-lg-4 col-md-6">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -368,7 +386,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-4 col-md-6">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -382,7 +400,7 @@ export default function Home() {
             </div>
 
             <div className="col-lg-4 col-md-6">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -406,9 +424,9 @@ export default function Home() {
             Join us on LinkedIn and never miss a beat on what's going on in the world of quantum-safe cybersecurity.
           </p>
           <div className={styles.socialIcons}>
-            <a 
-              href="https://www.linkedin.com/company/safeqbit-technologies-private-limited/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/company/safeqbit-technologies-private-limited/"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
             >
