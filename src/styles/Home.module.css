@@ -499,3 +499,49 @@
     font-size: 24px;
   }
 }
+
+/* Hero Large Logo TM Mark wrapper styles */
+.logoWrapper {
+  position: relative;
+  display: inline-block;
+  width: min(330px, 90%);
+  margin: 0 auto;
+}
+
+.heroTmMark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: var(--accent-color, #4AAFFA);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* Hover micro-animation */
+.logoWrapper:hover .heroTmMark {
+  transform: scale(1.15) rotate(15deg);
+  background: var(--accent-hover, #3a9cea);
+  box-shadow: 0 0 20px rgba(74, 175, 250, 0.6);
+}
+
+@media (max-width: 576px) {
+  .heroTmMark {
+    width: 24px;
+    height: 24px;
+    font-size: 8px;
+    top: 5px;
+    right: 5px;
+    border-width: 1.5px;
+  }
+}

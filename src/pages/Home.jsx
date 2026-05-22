@@ -208,12 +208,15 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 className="d-flex justify-content-center align-items-center"
               >
-                <img
-                  src={brandLogoWebp}
-                  className="img-fluid"
-                  alt="SafeQbit Large Emblem"
-                  style={{ width: 'min(330px, 90%)', filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.3))' }}
-                />
+                <div className={styles.logoWrapper}>
+                  <img
+                    src={brandLogoWebp}
+                    className="img-fluid w-100 h-100"
+                    alt="SafeQbit Large Emblem"
+                    style={{ filter: 'drop-shadow(0 15px 45px rgba(0,0,0,0.3))' }}
+                  />
+                  <span className={styles.heroTmMark}>TM</span>
+                </div>
               </motion.div>
             </div>
 
