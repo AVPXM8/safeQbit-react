@@ -6,12 +6,9 @@ import bharat5gImg from '../assets/images/Bharat5g.png';
 import bisagImg from '../assets/images/BISAG.png';
 import duccImg from '../assets/images/ducc.png';
 import tcilImg from '../assets/images/tcil.png';
-import mohImg from '../assets/images/MoH Affairs.png';
 import iitmImg from '../assets/images/iitm.png';
 import vdtImg from '../assets/images/vdt.png';
 import prakharImg from '../assets/images/prakhar.png';
-import indigoImg from '../assets/images/indigo.png';
-import iobankImg from '../assets/images/IoBank.png';
 import uboraImg from '../assets/images/Ubora.png';
 import sigroupImg from '../assets/images/SiGroup.png';
 import diplImg from '../assets/images/DipL.png';
@@ -24,12 +21,9 @@ const collaborators = [
   { img: bisagImg, name: 'BISAG-N India' },
   { img: duccImg, name: 'Delhi University Computer Centre' },
   { img: tcilImg, name: 'TCIL – Govt. of India Enterprise' },
-  { img: mohImg, name: 'Ministry of Home Affairs – I4C' },
   { img: iitmImg, name: 'Samgnya Tech Foundation' },
   { img: vdtImg, name: 'VDT PIS Pvt. Ltd.' },
   { img: prakharImg, name: 'Prakhar Software Solutions Ltd.' },
-  { img: indigoImg, name: 'IndiGo Airlines' },
-  { img: iobankImg, name: 'Indian Overseas Bank Ltd.' },
   { img: uboraImg, name: 'Ubora Systems and Solutions' },
   { img: sigroupImg, name: 'Supreme International Group (SIG) sarl' },
   { img: diplImg, name: 'Deccan Infotech (P) Ltd' }
@@ -46,7 +40,7 @@ export default function Collaborators() {
     setIsPaused(true);
     const track = trackRef.current;
     if (!track) return;
-    
+
     let currentOffset = offset + ITEM_WIDTH;
     const halfWidth = collaborators.length * ITEM_WIDTH;
     if (currentOffset >= halfWidth) {
@@ -89,9 +83,9 @@ export default function Collaborators() {
 
         <div className="collab-slider-wrapper position-relative px-5 d-flex align-items-center">
           {/* LEFT ARROW */}
-          <button 
-            onClick={handlePrev} 
-            className="collab-arrow collab-arrow-left position-absolute" 
+          <button
+            onClick={handlePrev}
+            className="collab-arrow collab-arrow-left position-absolute"
             style={{ left: 0, zIndex: 10, background: 'rgba(2, 16, 97, 0.08)', border: 'none', borderRadius: '50%', width: 40, height: 40 }}
             aria-label="Previous Collaborator"
           >
@@ -100,7 +94,7 @@ export default function Collaborators() {
 
           {/* INFINITE TRACK WRAPPER */}
           <div className="logo-slider overflow-hidden w-100 py-3">
-            <div 
+            <div
               ref={trackRef}
               className="logo-track d-flex gap-4"
               style={{
@@ -113,23 +107,23 @@ export default function Collaborators() {
             >
               {/* Render items twice for a perfect looping ticker */}
               {[...collaborators, ...collaborators].map((collab, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="logo-item text-center d-flex flex-column align-items-center justify-content-center"
                   style={{ width: 160, flexShrink: 0 }}
                 >
-                  <div 
+                  <div
                     className="logo-img-box d-flex align-items-center justify-content-center bg-white p-3 rounded-4 shadow-sm"
                     style={{ width: 120, height: 90, border: '1px solid rgba(2, 16, 97, 0.06)' }}
                   >
-                    <img 
-                      src={collab.img} 
-                      className="brand-logo img-fluid" 
+                    <img
+                      src={collab.img}
+                      className="brand-logo img-fluid"
                       alt={collab.name}
                       style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
                     />
                   </div>
-                  <span 
+                  <span
                     className="logo-subtitle mt-2 d-block text-muted text-truncate"
                     style={{ fontSize: '12px', fontWeight: '600', maxWidth: '100%' }}
                   >
@@ -141,9 +135,9 @@ export default function Collaborators() {
           </div>
 
           {/* RIGHT ARROW */}
-          <button 
-            onClick={handleNext} 
-            className="collab-arrow collab-arrow-right position-absolute" 
+          <button
+            onClick={handleNext}
+            className="collab-arrow collab-arrow-right position-absolute"
             style={{ right: 0, zIndex: 10, background: 'rgba(2, 16, 97, 0.08)', border: 'none', borderRadius: '50%', width: 40, height: 40 }}
             aria-label="Next Collaborator"
           >
